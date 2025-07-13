@@ -24,8 +24,8 @@ Check out my latest resume [here](https://drive.google.com/file/d/1Gs2v8ARxsM31d
 
 ## 📫 Connect With Me
 
-- **Email**: [ketul3168@gmail.com]
-- **LinkedIn**: [linkedin.com/in/yourprofile](https://www.linkedin.com/in/ketul-patel-0654b0266/)
-- **GitHub**: [github.com/yourusername](https://github.com/KFS-developer)
+- **Email**: ketul3168@gmail.com
+- [**LinkedIn**](https://www.linkedin.com/in/ketul-patel-0654b0266/)
+- [**GitHub**](https://github.com/KFS-developer)
 
 ---
