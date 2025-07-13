@@ -6,7 +6,7 @@ const useLocoScrollSections = () => {
   const scrollRef = useRef(null);
   const [activeSection, setActiveSection] = useState('');
   const [visibleSections, setVisibleSections] = useState([]);
-  const scrollInstance = useRef(null);
+  const scrollInstance = useRef(null); // ✅ important
 
   useEffect(() => {
     if (!scrollRef.current) return;
@@ -17,12 +17,12 @@ const useLocoScrollSections = () => {
       lerp: 0.1,
       smartphone: {
         smooth: true,
-        breakpoint: 0
+        breakpoint: 0,
       },
       tablet: {
         smooth: true,
-        breakpoint: 0
-      }
+        breakpoint: 0,
+      },
     });
 
     const sections = scrollRef.current.querySelectorAll('.section');
@@ -36,7 +36,8 @@ const useLocoScrollSections = () => {
         const sectionId = section.id;
 
         const isInViewport =
-          rect.top < window.innerHeight * 0.7 && rect.bottom > window.innerHeight * 0.3;
+          rect.top < window.innerHeight * 0.7 &&
+          rect.bottom > window.innerHeight * 0.3;
 
         if (isInViewport) {
           newVisible.push(sectionId);
@@ -55,6 +56,8 @@ const useLocoScrollSections = () => {
     };
 
     scrollInstance.current.on('scroll', handleScroll);
+
+    // initial update
     setTimeout(() => {
       scrollInstance.current.update();
     }, 100);
@@ -64,7 +67,12 @@ const useLocoScrollSections = () => {
     };
   }, []);
 
-  return { scrollRef, activeSection, visibleSections };
+  return {
+    scrollRef,
+    scrollInstance,
+    activeSection,
+    visibleSections,
+  };
 };
 
 export default useLocoScrollSections;
