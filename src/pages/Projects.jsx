@@ -59,7 +59,7 @@ const Projects = () => {
 
     return (
         <section id="projects" className="section min-h-screen py-20 bg-[#0a0a14]" data-scroll-section>
-            <div className="container mx-auto px-4 md:px-6">
+            <div className="w-full max-w-screen-xl mx-auto px-4 md:px-8">
                 <motion.div className="text-center mb-16"
                     variants={fadeIn('up', 0.3)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.3 }}>
                     <span className="bg-indigo-500/10 text-indigo-400 px-4 py-1 rounded-full text-sm font-medium">

@@ -8,7 +8,7 @@ const Footer = () => {
         <footer className="bg-[#080811] text-white py-8" data-scroll-section>
             <motion.div
                 variants={fadeIn('up', 0.2)} initial="hidden" whileInView={"show"} viewport={{ once: true, amount: 0.3 }}>
-                <div className="container mx-auto px-4 md:px-6">
+                <div className="w-full max-w-screen-xl mx-auto px-4 md:px-8">
                     <div className="flex flex-col md:flex-row justify-between items-center">
                         <div className="mb-4 md:mb-0" >
                             <a href="#" className="text-2xl font-bold flex items-center space-x-2">

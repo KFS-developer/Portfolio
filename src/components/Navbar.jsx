@@ -3,7 +3,7 @@ import logo from '../assets/KP.png'
 const Navbar = ({ activeSection, scrollToSection, isMenuOpen, setIsMenuOpen }) => {
     return (
         <nav className="fixed w-full bg-[#0a0a14] bg-opacity-80 backdrop-blur-lg z-50 py-4 border-b border-indigo-900/30">
-            <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
+            <div className="w-full max-w-screen-xl mx-auto px-4 md:px-8 flex justify-between items-center">
                 <a href="#" className="text-2xl font-bold flex items-center space-x-2">
                     <img src={logo} alt="" className="w-11 h-11" />
                     <span className="text-white">Patel</span>

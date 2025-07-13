@@ -6,7 +6,7 @@ import { fadeIn } from "../variants";
 const About = () => {
     return (
         <section id="about" className="section min-h-screen py-20 bg-[#0a0a14]" data-scroll-section>
-            <div className="container mx-auto px-4 md:px-6">
+            <div className="w-full max-w-screen-xl mx-auto px-4 md:px-8">
                 <motion.div className="text-center mb-16"
                     variants={fadeIn('up', 0.3)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.3 }}>
                     <h2 className="heading text-3xl md:text-4xl font-bold text-white mt-4 mb-4">About <span className="gradient-text">Me</span></h2>
