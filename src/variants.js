@@ -2,8 +2,8 @@ export const fadeIn = (direction, delay) => {
     return {
         hidden: {
             opacity: 0,
-            y: direction === 'up' ? 30 : direction === 'down' ? -30 : 0,
-            x: direction === 'left' ? 30 : direction === 'right' ? -30 : 0,
+            y: direction === 'up' ? 20 : direction === 'down' ? -20 : 0,
+            x: direction === 'left' ? 20 : direction === 'right' ? -20 : 0,
             transition: { delay }
         },
         show: {
@@ -24,7 +24,7 @@ export const fadeInSpring = (direction, delay) => {
   return {
     hidden: {
       opacity: 0,
-      y: direction === 'up' ? 30 : direction === 'down' ? -30 : 0,
+      y: direction === 'up' ? 20 : direction === 'down' ? -20 : 0,
       transition: { delay }
     },
     show: {
