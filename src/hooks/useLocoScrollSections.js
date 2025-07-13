@@ -15,6 +15,14 @@ const useLocoScrollSections = () => {
       el: scrollRef.current,
       smooth: true,
       lerp: 0.1,
+      smartphone: {
+        smooth: true,
+        breakpoint: 0
+      },
+      tablet: {
+        smooth: true,
+        breakpoint: 0
+      }
     });
 
     const sections = scrollRef.current.querySelectorAll('.section');
