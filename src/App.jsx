@@ -11,16 +11,20 @@ import CursorGlow from './components/CursorGlow';
 import useLocoScrollSections from './hooks/useLocoScrollSections';
 
 const App = () => {
-  const { activeSection, scrollRef } = useLocoScrollSections();
+  const { activeSection, scrollRef, scrollInstance } = useLocoScrollSections();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (id) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
+  const el = document.getElementById(id);
+  if (el) {
+    if (scrollInstance.current) {
+      scrollInstance.current.scrollTo(el, { offset: 0, duration: 800 });
+    } else {
+      el.scrollIntoView({ behavior: 'smooth' }); // fallback
     }
-    setIsMenuOpen(false);
-  };
+  }
+  setIsMenuOpen(false);
+};
 
   return (
     <>
